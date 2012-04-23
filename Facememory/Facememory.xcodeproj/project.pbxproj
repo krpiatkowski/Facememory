@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB3B1C581545C34400BDB5C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3B1C571545C34400BDB5C9 /* UIKit.framework */; };
+		CB3B1C5A1545C34400BDB5C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3B1C591545C34400BDB5C9 /* Foundation.framework */; };
+		CB3B1C5C1545C34400BDB5C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3B1C5B1545C34400BDB5C9 /* CoreGraphics.framework */; };
+		CB3B1C621545C34400BDB5C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB3B1C601545C34400BDB5C9 /* InfoPlist.strings */; };
+		CB3B1C641545C34400BDB5C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3B1C631545C34400BDB5C9 /* main.m */; };
+		CB3B1C681545C34400BDB5C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3B1C671545C34400BDB5C9 /* AppDelegate.m */; };
+		CB3B1C6B1545C34400BDB5C9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3B1C691545C34400BDB5C9 /* MainStoryboard.storyboard */; };
+		CB3B1C6E1545C34400BDB5C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3B1C6D1545C34400BDB5C9 /* ViewController.m */; };
+		CB3B1C761545C34400BDB5C9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3B1C751545C34400BDB5C9 /* SenTestingKit.framework */; };
+		CB3B1C771545C34400BDB5C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3B1C571545C34400BDB5C9 /* UIKit.framework */; };
+		CB3B1C781545C34400BDB5C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3B1C591545C34400BDB5C9 /* Foundation.framework */; };
+		CB3B1C801545C34400BDB5C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB3B1C7E1545C34400BDB5C9 /* InfoPlist.strings */; };
+		CB3B1C831545C34400BDB5C9 /* FacememoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3B1C821545C34400BDB5C9 /* FacememoryTests.m */; };
+		CB3B1C8F1545C57400BDB5C9 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3B1C8E1545C57400BDB5C9 /* CameraViewController.m */; };
+		CB3B1C901545C57400BDB5C9 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3B1C8E1545C57400BDB5C9 /* CameraViewController.m */; };
+		CB3B1C931545C86A00BDB5C9 /* SoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3B1C921545C86A00BDB5C9 /* SoundViewController.m */; };
+		CB3B1C941545C86A00BDB5C9 /* SoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3B1C921545C86A00BDB5C9 /* SoundViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB3B1C791545C34400BDB5C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB3B1C4A1545C34300BDB5C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB3B1C521545C34400BDB5C9;
+			remoteInfo = Facememory;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB3B1C531545C34400BDB5C9 /* Facememory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facememory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB3B1C571545C34400BDB5C9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CB3B1C591545C34400BDB5C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CB3B1C5B1545C34400BDB5C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CB3B1C5F1545C34400BDB5C9 /* Facememory-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Facememory-Info.plist"; sourceTree = "<group>"; };
+		CB3B1C611545C34400BDB5C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB3B1C631545C34400BDB5C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB3B1C651545C34400BDB5C9 /* Facememory-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Facememory-Prefix.pch"; sourceTree = "<group>"; };
+		CB3B1C661545C34400BDB5C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CB3B1C671545C34400BDB5C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CB3B1C6A1545C34400BDB5C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CB3B1C6C1545C34400BDB5C9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CB3B1C6D1545C34400BDB5C9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CB3B1C741545C34400BDB5C9 /* FacememoryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacememoryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB3B1C751545C34400BDB5C9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CB3B1C7D1545C34400BDB5C9 /* FacememoryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FacememoryTests-Info.plist"; sourceTree = "<group>"; };
+		CB3B1C7F1545C34400BDB5C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB3B1C811545C34400BDB5C9 /* FacememoryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacememoryTests.h; sourceTree = "<group>"; };
+		CB3B1C821545C34400BDB5C9 /* FacememoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacememoryTests.m; sourceTree = "<group>"; };
+		CB3B1C8D1545C57400BDB5C9 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		CB3B1C8E1545C57400BDB5C9 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		CB3B1C911545C86A00BDB5C9 /* SoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundViewController.h; sourceTree = "<group>"; };
+		CB3B1C921545C86A00BDB5C9 /* SoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB3B1C501545C34400BDB5C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB3B1C581545C34400BDB5C9 /* UIKit.framework in Frameworks */,
+				CB3B1C5A1545C34400BDB5C9 /* Foundation.framework in Frameworks */,
+				CB3B1C5C1545C34400BDB5C9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3B1C701545C34400BDB5C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB3B1C761545C34400BDB5C9 /* SenTestingKit.framework in Frameworks */,
+				CB3B1C771545C34400BDB5C9 /* UIKit.framework in Frameworks */,
+				CB3B1C781545C34400BDB5C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB3B1C481545C34300BDB5C9 = {
+			isa = PBXGroup;
+			children = (
+				CB3B1C5D1545C34400BDB5C9 /* Facememory */,
+				CB3B1C7B1545C34400BDB5C9 /* FacememoryTests */,
+				CB3B1C561545C34400BDB5C9 /* Frameworks */,
+				CB3B1C541545C34400BDB5C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB3B1C541545C34400BDB5C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB3B1C531545C34400BDB5C9 /* Facememory.app */,
+				CB3B1C741545C34400BDB5C9 /* FacememoryTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB3B1C561545C34400BDB5C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB3B1C571545C34400BDB5C9 /* UIKit.framework */,
+				CB3B1C591545C34400BDB5C9 /* Foundation.framework */,
+				CB3B1C5B1545C34400BDB5C9 /* CoreGraphics.framework */,
+				CB3B1C751545C34400BDB5C9 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB3B1C5D1545C34400BDB5C9 /* Facememory */ = {
+			isa = PBXGroup;
+			children = (
+				CB3B1C661545C34400BDB5C9 /* AppDelegate.h */,
+				CB3B1C671545C34400BDB5C9 /* AppDelegate.m */,
+				CB3B1C691545C34400BDB5C9 /* MainStoryboard.storyboard */,
+				CB3B1C6C1545C34400BDB5C9 /* ViewController.h */,
+				CB3B1C6D1545C34400BDB5C9 /* ViewController.m */,
+				CB3B1C8C1545C55500BDB5C9 /* Controllers */,
+				CB3B1C5E1545C34400BDB5C9 /* Supporting Files */,
+			);
+			path = Facememory;
+			sourceTree = "<group>";
+		};
+		CB3B1C5E1545C34400BDB5C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB3B1C5F1545C34400BDB5C9 /* Facememory-Info.plist */,
+				CB3B1C601545C34400BDB5C9 /* InfoPlist.strings */,
+				CB3B1C631545C34400BDB5C9 /* main.m */,
+				CB3B1C651545C34400BDB5C9 /* Facememory-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB3B1C7B1545C34400BDB5C9 /* FacememoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB3B1C811545C34400BDB5C9 /* FacememoryTests.h */,
+				CB3B1C821545C34400BDB5C9 /* FacememoryTests.m */,
+				CB3B1C7C1545C34400BDB5C9 /* Supporting Files */,
+			);
+			path = FacememoryTests;
+			sourceTree = "<group>";
+		};
+		CB3B1C7C1545C34400BDB5C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB3B1C7D1545C34400BDB5C9 /* FacememoryTests-Info.plist */,
+				CB3B1C7E1545C34400BDB5C9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB3B1C8C1545C55500BDB5C9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB3B1C8D1545C57400BDB5C9 /* CameraViewController.h */,
+				CB3B1C8E1545C57400BDB5C9 /* CameraViewController.m */,
+				CB3B1C911545C86A00BDB5C9 /* SoundViewController.h */,
+				CB3B1C921545C86A00BDB5C9 /* SoundViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB3B1C521545C34400BDB5C9 /* Facememory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB3B1C861545C34400BDB5C9 /* Build configuration list for PBXNativeTarget "Facememory" */;
+			buildPhases = (
+				CB3B1C4F1545C34400BDB5C9 /* Sources */,
+				CB3B1C501545C34400BDB5C9 /* Frameworks */,
+				CB3B1C511545C34400BDB5C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Facememory;
+			productName = Facememory;
+			productReference = CB3B1C531545C34400BDB5C9 /* Facememory.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB3B1C731545C34400BDB5C9 /* FacememoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB3B1C891545C34400BDB5C9 /* Build configuration list for PBXNativeTarget "FacememoryTests" */;
+			buildPhases = (
+				CB3B1C6F1545C34400BDB5C9 /* Sources */,
+				CB3B1C701545C34400BDB5C9 /* Frameworks */,
+				CB3B1C711545C34400BDB5C9 /* Resources */,
+				CB3B1C721545C34400BDB5C9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB3B1C7A1545C34400BDB5C9 /* PBXTargetDependency */,
+			);
+			name = FacememoryTests;
+			productName = FacememoryTests;
+			productReference = CB3B1C741545C34400BDB5C9 /* FacememoryTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB3B1C4A1545C34300BDB5C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = CB3B1C4D1545C34300BDB5C9 /* Build configuration list for PBXProject "Facememory" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CB3B1C481545C34300BDB5C9;
+			productRefGroup = CB3B1C541545C34400BDB5C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB3B1C521545C34400BDB5C9 /* Facememory */,
+				CB3B1C731545C34400BDB5C9 /* FacememoryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB3B1C511545C34400BDB5C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB3B1C621545C34400BDB5C9 /* InfoPlist.strings in Resources */,
+				CB3B1C6B1545C34400BDB5C9 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3B1C711545C34400BDB5C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB3B1C801545C34400BDB5C9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB3B1C721545C34400BDB5C9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB3B1C4F1545C34400BDB5C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB3B1C641545C34400BDB5C9 /* main.m in Sources */,
+				CB3B1C681545C34400BDB5C9 /* AppDelegate.m in Sources */,
+				CB3B1C6E1545C34400BDB5C9 /* ViewController.m in Sources */,
+				CB3B1C8F1545C57400BDB5C9 /* CameraViewController.m in Sources */,
+				CB3B1C931545C86A00BDB5C9 /* SoundViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3B1C6F1545C34400BDB5C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB3B1C831545C34400BDB5C9 /* FacememoryTests.m in Sources */,
+				CB3B1C901545C57400BDB5C9 /* CameraViewController.m in Sources */,
+				CB3B1C941545C86A00BDB5C9 /* SoundViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB3B1C7A1545C34400BDB5C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB3B1C521545C34400BDB5C9 /* Facememory */;
+			targetProxy = CB3B1C791545C34400BDB5C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB3B1C601545C34400BDB5C9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB3B1C611545C34400BDB5C9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CB3B1C691545C34400BDB5C9 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB3B1C6A1545C34400BDB5C9 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		CB3B1C7E1545C34400BDB5C9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB3B1C7F1545C34400BDB5C9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB3B1C841545C34400BDB5C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CB3B1C851545C34400BDB5C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB3B1C871545C34400BDB5C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Facememory/Facememory-Prefix.pch";
+				INFOPLIST_FILE = "Facememory/Facememory-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CB3B1C881545C34400BDB5C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Facememory/Facememory-Prefix.pch";
+				INFOPLIST_FILE = "Facememory/Facememory-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CB3B1C8A1545C34400BDB5C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Facememory.app/Facememory";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Facememory/Facememory-Prefix.pch";
+				INFOPLIST_FILE = "FacememoryTests/FacememoryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CB3B1C8B1545C34400BDB5C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Facememory.app/Facememory";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Facememory/Facememory-Prefix.pch";
+				INFOPLIST_FILE = "FacememoryTests/FacememoryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB3B1C4D1545C34300BDB5C9 /* Build configuration list for PBXProject "Facememory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB3B1C841545C34400BDB5C9 /* Debug */,
+				CB3B1C851545C34400BDB5C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB3B1C861545C34400BDB5C9 /* Build configuration list for PBXNativeTarget "Facememory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB3B1C871545C34400BDB5C9 /* Debug */,
+				CB3B1C881545C34400BDB5C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB3B1C891545C34400BDB5C9 /* Build configuration list for PBXNativeTarget "FacememoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB3B1C8A1545C34400BDB5C9 /* Debug */,
+				CB3B1C8B1545C34400BDB5C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB3B1C4A1545C34300BDB5C9 /* Project object */;
+}

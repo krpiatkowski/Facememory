@@ -10,4 +10,10 @@
 
 @interface SoundViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *recordButton;
+@property (strong, nonatomic) IBOutlet UIButton *redoButton;
+@property (strong, nonatomic) IBOutlet UIButton *confirmButton;
+- (IBAction)didToggleRecord:(id)sender;
+- (IBAction)didConfirm:(id)sender;
+- (IBAction)didRedo:(id)sender;
 @end

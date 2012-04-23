@@ -13,4 +13,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *redoButton;
 @property (strong, nonatomic) IBOutlet UIButton *confirmButton;
 - (IBAction)didTakePicture:(id)sender;
+- (IBAction)didRedo:(id)sender;
 @end

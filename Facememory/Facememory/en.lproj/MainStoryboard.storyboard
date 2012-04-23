@@ -74,10 +74,6 @@
                                     <action selector="didTakePicture:" destination="3YR-3v-ufb" eventType="touchUpInside" id="ddw-ag-Xno"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="1kc-33-sRr">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="415"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="elB-bv-bqC">
                                 <rect key="frame" x="20" y="418" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -108,11 +104,17 @@
                                     <segue destination="mHM-3s-Fl0" kind="push" id="pG5-qF-OXM"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="Gjl-Os-TrE" userLabel="CameraView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="410"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jxz-Zf-Vqy"/>
                     <connections>
+                        <outlet property="cameraView" destination="Gjl-Os-TrE" id="Qry-Y6-RcJ"/>
                         <outlet property="confirmButton" destination="dKQ-qo-Y5e" id="x7W-hh-CVR"/>
                         <outlet property="redoButton" destination="elB-bv-bqC" id="rGV-9M-fMp"/>
                         <outlet property="snapButton" destination="U64-Tb-lHd" id="lam-h4-8BS"/>
@@ -214,6 +216,7 @@
             <relationships>
                 <relationship kind="action" name="didRedo:"/>
                 <relationship kind="action" name="didTakePicture:"/>
+                <relationship kind="outlet" name="cameraView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="confirmButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="redoButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="snapButton" candidateClass="UIButton"/>

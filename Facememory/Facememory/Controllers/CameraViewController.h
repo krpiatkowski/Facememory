@@ -12,6 +12,10 @@
 @property (strong, nonatomic) IBOutlet UIButton *snapButton;
 @property (strong, nonatomic) IBOutlet UIButton *redoButton;
 @property (strong, nonatomic) IBOutlet UIButton *confirmButton;
+
+@property (strong, nonatomic) IBOutlet UIView *cameraView;
+
+
 - (IBAction)didTakePicture:(id)sender;
 - (IBAction)didRedo:(id)sender;
 @end

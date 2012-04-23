@@ -9,13 +9,15 @@
 #import "CameraViewController.h"
 
 @interface CameraViewController ()
-
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
 @end
 
 @implementation CameraViewController
+@synthesize cameraView;
 @synthesize snapButton;
 @synthesize redoButton;
 @synthesize confirmButton;
+@synthesize imagePicker;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [self.cameraView addSubview:self.imagePicker.view];
+    
 }
 
 - (void)viewDidUnload
@@ -37,6 +40,7 @@
     [self setRedoButton:nil];
     [self setConfirmButton:nil];
     [self setSnapButton:nil];
+    [self setCameraView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

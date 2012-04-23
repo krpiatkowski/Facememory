@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CameraViewController : UIViewController
+@interface CameraViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *snapButton;
 @property (strong, nonatomic) IBOutlet UIButton *redoButton;
 @property (strong, nonatomic) IBOutlet UIButton *confirmButton;
+@property (strong, nonatomic) IBOutlet UIView *overlayView;
+@property (weak, nonatomic) IBOutlet UIImageView *previewImage;
 
-@property (strong, nonatomic) IBOutlet UIView *cameraView;
-
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
 
 - (IBAction)didTakePicture:(id)sender;
 - (IBAction)didRedo:(id)sender;

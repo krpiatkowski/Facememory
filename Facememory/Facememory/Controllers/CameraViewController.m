@@ -9,15 +9,16 @@
 #import "CameraViewController.h"
 
 @interface CameraViewController ()
-@property (strong, nonatomic) UIImagePickerController *imagePicker;
+
 @end
 
 @implementation CameraViewController
-@synthesize cameraView;
 @synthesize snapButton;
 @synthesize redoButton;
 @synthesize confirmButton;
 @synthesize imagePicker;
+@synthesize overlayView;
+@synthesize previewImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,11 +29,24 @@
     return self;
 }
 
+- (void)presentCamera
+{
+    self.imagePicker = [[UIImagePickerController alloc] init];
+    self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.imagePicker.showsCameraControls = NO;
+    self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    self.imagePicker.cameraOverlayView = self.overlayView;
+    
+    self.imagePicker.delegate = self;
+    
+    [self presentModalViewController:self.imagePicker animated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.cameraView addSubview:self.imagePicker.view];
     
+    [self presentCamera];
 }
 
 - (void)viewDidUnload
@@ -40,7 +54,8 @@
     [self setRedoButton:nil];
     [self setConfirmButton:nil];
     [self setSnapButton:nil];
-    [self setCameraView:nil];
+    self.overlayView = nil;
+    [self setPreviewImage:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -52,6 +67,8 @@
 
 - (IBAction)didTakePicture:(id)sender 
 {
+    [self.imagePicker takePicture];
+    
     self.snapButton.hidden = YES;
     self.redoButton.hidden = NO;
     self.confirmButton.hidden = NO;
@@ -59,8 +76,19 @@
 
 - (IBAction)didRedo:(id)sender 
 {
+    [self presentCamera];
+
     self.snapButton.hidden = NO;
     self.redoButton.hidden = YES;
     self.confirmButton.hidden = YES;    
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    self.previewImage.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.previewImage.image = [UIImage imageWithCGImage:self.previewImage.image.CGImage scale:1.0f orientation:UIImageOrientationLeftMirrored];
+    
+    
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end

@@ -1,33 +1,23 @@
-//
-//  ViewController.m
-//  Facememory
-//
-//  Created by Krzysztof Piatkowski on 23/04/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
 
 #import "CameraViewController.h"
 
 @interface CameraViewController ()
 
+@property (nonatomic) UIImagePickerControllerCameraDevice cameraDevice;
+
 @end
 
+
 @implementation CameraViewController
+
 @synthesize snapButton;
 @synthesize redoButton;
 @synthesize confirmButton;
 @synthesize imagePicker;
 @synthesize overlayView;
 @synthesize previewImage;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize toggleCamButton;
+@synthesize cameraDevice;
 
 - (void)presentCamera
 {
@@ -36,20 +26,26 @@
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
         self.imagePicker.showsCameraControls = NO;
-        if([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
-            self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-        }
-        self.imagePicker.cameraOverlayView = self.overlayView;
-        
+        self.imagePicker.cameraDevice = self.cameraDevice;
         self.imagePicker.delegate = self;
         
         [self presentModalViewController:self.imagePicker animated:NO];
+
+        // Inserting the overlay after presentModal is smoother
+        self.imagePicker.cameraOverlayView = self.overlayView;
     }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    // Setup default cam and the toggleButton
+    self.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    if([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
+        self.toggleCamButton.hidden = NO;
+        self.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    }
     
     [self presentCamera];
 }
@@ -61,6 +57,7 @@
     [self setSnapButton:nil];
     self.overlayView = nil;
     [self setPreviewImage:nil];
+    [self setToggleCamButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -73,27 +70,33 @@
 - (IBAction)didTakePicture:(id)sender 
 {
     [self.imagePicker takePicture];
-    
-    self.snapButton.hidden = YES;
-    self.redoButton.hidden = NO;
-    self.confirmButton.hidden = NO;
 }
 
 - (IBAction)didRedo:(id)sender 
 {
     [self presentCamera];
+}
 
-    self.snapButton.hidden = NO;
-    self.redoButton.hidden = YES;
-    self.confirmButton.hidden = YES;    
+- (IBAction)didToggleCam:(id)sender {
+    if (self.cameraDevice == UIImagePickerControllerCameraDeviceFront) {
+        self.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    } else {
+        self.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    }
+    
+    self.imagePicker.cameraDevice = self.cameraDevice;
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    self.previewImage.image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    self.previewImage.image = [UIImage imageWithCGImage:self.previewImage.image.CGImage scale:1.0f orientation:UIImageOrientationLeftMirrored];
+    // Getting picture, handling orientation
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    if(self.cameraDevice == UIImagePickerControllerCameraDeviceFront) {
+        image = [UIImage imageWithCGImage:image.CGImage scale:1.0f orientation:UIImageOrientationLeftMirrored];
+    }
+
+    self.previewImage.image = image;
     
-    
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissModalViewControllerAnimated:NO];
 }
 @end

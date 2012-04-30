@@ -10,9 +10,10 @@
 
 @interface CameraViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (strong, nonatomic) IBOutlet UIButton *snapButton;
-@property (strong, nonatomic) IBOutlet UIButton *redoButton;
-@property (strong, nonatomic) IBOutlet UIButton *confirmButton;
+@property (weak, nonatomic) IBOutlet UIButton *snapButton;
+@property (weak, nonatomic) IBOutlet UIButton *toggleCamButton;
+@property (weak, nonatomic) IBOutlet UIButton *redoButton;
+@property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 @property (strong, nonatomic) IBOutlet UIView *overlayView;
 @property (weak, nonatomic) IBOutlet UIImageView *previewImage;
 
@@ -20,4 +21,5 @@
 
 - (IBAction)didTakePicture:(id)sender;
 - (IBAction)didRedo:(id)sender;
+- (IBAction)didToggleCam:(id)sender;
 @end

@@ -32,14 +32,19 @@
 - (void)presentCamera
 {
     self.imagePicker = [[UIImagePickerController alloc] init];
-    self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    self.imagePicker.showsCameraControls = NO;
-    self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-    self.imagePicker.cameraOverlayView = self.overlayView;
     
-    self.imagePicker.delegate = self;
-    
-    [self presentModalViewController:self.imagePicker animated:YES];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        self.imagePicker.showsCameraControls = NO;
+        if([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
+            self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+        }
+        self.imagePicker.cameraOverlayView = self.overlayView;
+        
+        self.imagePicker.delegate = self;
+        
+        [self presentModalViewController:self.imagePicker animated:NO];
+    }
 }
 
 - (void)viewDidLoad

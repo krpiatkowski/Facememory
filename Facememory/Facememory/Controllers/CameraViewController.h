@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CameraViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
 @property (strong, nonatomic) IBOutlet UIButton *snapButton;
 @property (strong, nonatomic) IBOutlet UIButton *redoButton;
 @property (strong, nonatomic) IBOutlet UIButton *confirmButton;

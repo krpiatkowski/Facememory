@@ -201,12 +201,28 @@
                                     <action selector="didConfirm:" destination="mHM-3s-Fl0" eventType="touchUpInside" id="AVm-1f-BRB"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7SD-Nd-FnC">
+                                <rect key="frame" x="124" y="197" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapPlay:" destination="mHM-3s-Fl0" eventType="touchUpInside" id="vjA-K6-dLq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wj9-Id-bmZ"/>
                     <connections>
                         <outlet property="confirmButton" destination="2XJ-Ba-P3g" id="d0J-3Y-UNB"/>
+                        <outlet property="playButton" destination="7SD-Nd-FnC" id="6nK-3M-Xdl"/>
                         <outlet property="recordButton" destination="iKY-Uo-eqi" id="wgI-1w-sG6"/>
                         <outlet property="redoButton" destination="wpv-n0-jlV" id="QSC-Ao-dc6"/>
                     </connections>
@@ -234,6 +250,38 @@
             <point key="canvasLocation" x="114" y="106"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CameraViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="didRedo:"/>
+                <relationship kind="action" name="didTakePicture:"/>
+                <relationship kind="action" name="didToggleCam:"/>
+                <relationship kind="outlet" name="confirmButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="overlayView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="previewImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="redoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="snapButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="toggleCamButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SoundViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SoundViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="didConfirm:"/>
+                <relationship kind="action" name="didRedo:"/>
+                <relationship kind="action" name="didTapPlay:"/>
+                <relationship kind="action" name="didToggleRecord:"/>
+                <relationship kind="outlet" name="confirmButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="recordButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="redoButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

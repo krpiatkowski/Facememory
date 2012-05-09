@@ -13,7 +13,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *recordButton;
 @property (strong, nonatomic) IBOutlet UIButton *redoButton;
 @property (strong, nonatomic) IBOutlet UIButton *confirmButton;
+@property (strong, nonatomic) IBOutlet UIButton *playButton;
 - (IBAction)didToggleRecord:(id)sender;
 - (IBAction)didConfirm:(id)sender;
 - (IBAction)didRedo:(id)sender;
+- (IBAction)didTapPlay:(id)sender;
 @end

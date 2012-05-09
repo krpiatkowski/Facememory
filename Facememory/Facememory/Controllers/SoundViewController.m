@@ -7,16 +7,15 @@
 //
 
 #import "SoundViewController.h"
-
-@interface SoundViewController ()
-
-@end
+#import "Services.h"
 
 @implementation SoundViewController
 @synthesize recordButton;
 @synthesize redoButton;
 @synthesize confirmButton;
+@synthesize playButton;
 
+#pragma mark - Lifecycle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,8 +27,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [super viewDidLoad];   
 }
 
 - (void)viewDidUnload
@@ -37,6 +35,7 @@
     [self setRecordButton:nil];
     [self setRedoButton:nil];
     [self setConfirmButton:nil];
+    [self setPlayButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -45,15 +44,24 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+#pragma mark - IBActions
+
 - (IBAction)didToggleRecord:(id)sender 
 {
     if(!self.recordButton.selected) {
         [self.recordButton setSelected:YES];
+        
+        [[Services profileService] createProfile];        
+        [[Services soundService] recordForProfile:[Services profileService].currentProfile];
+        
     } else {
+        [[Services soundService] stop];
+        self.playButton.hidden = NO;
         self.recordButton.hidden = YES;
         self.redoButton.hidden = NO;
         self.confirmButton.hidden = NO;
-        [self.recordButton setSelected:NO];      
+        [self.recordButton setSelected:NO];
     }
 }
 
@@ -64,8 +72,13 @@
 
 - (IBAction)didRedo:(id)sender 
 {
+    self.playButton.hidden = YES;
     self.recordButton.hidden = NO;
     self.redoButton.hidden = YES;
     self.confirmButton.hidden = YES;
+}
+
+- (IBAction)didTapPlay:(id)sender {
+    [[Services soundService] playForProfile:[Services profileService].currentProfile];
 }
 @end

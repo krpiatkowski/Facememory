@@ -14,7 +14,6 @@
 		CB3B1C641545C34400BDB5C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3B1C631545C34400BDB5C9 /* main.m */; };
 		CB3B1C681545C34400BDB5C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3B1C671545C34400BDB5C9 /* AppDelegate.m */; };
 		CB3B1C6B1545C34400BDB5C9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3B1C691545C34400BDB5C9 /* MainStoryboard.storyboard */; };
-		CB3B1C6E1545C34400BDB5C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3B1C6D1545C34400BDB5C9 /* ViewController.m */; };
 		CB3B1C761545C34400BDB5C9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3B1C751545C34400BDB5C9 /* SenTestingKit.framework */; };
 		CB3B1C771545C34400BDB5C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3B1C571545C34400BDB5C9 /* UIKit.framework */; };
 		CB3B1C781545C34400BDB5C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3B1C591545C34400BDB5C9 /* Foundation.framework */; };
@@ -58,8 +57,6 @@
 		CB3B1C661545C34400BDB5C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB3B1C671545C34400BDB5C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CB3B1C6A1545C34400BDB5C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		CB3B1C6C1545C34400BDB5C9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CB3B1C6D1545C34400BDB5C9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CB3B1C741545C34400BDB5C9 /* FacememoryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacememoryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3B1C751545C34400BDB5C9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		CB3B1C7D1545C34400BDB5C9 /* FacememoryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FacememoryTests-Info.plist"; sourceTree = "<group>"; };
@@ -111,8 +108,6 @@
 		CB3B1C481545C34300BDB5C9 = {
 			isa = PBXGroup;
 			children = (
-				CBA140BB155AEDE5001D0D85 /* AudioToolbox.framework */,
-				CBA13A391559BB9D00940A4D /* AVFoundation.framework */,
 				CB3B1C5D1545C34400BDB5C9 /* Facememory */,
 				CB3B1C7B1545C34400BDB5C9 /* FacememoryTests */,
 				CB3B1C561545C34400BDB5C9 /* Frameworks */,
@@ -132,6 +127,8 @@
 		CB3B1C561545C34400BDB5C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBA140BB155AEDE5001D0D85 /* AudioToolbox.framework */,
+				CBA13A391559BB9D00940A4D /* AVFoundation.framework */,
 				CB3B1C571545C34400BDB5C9 /* UIKit.framework */,
 				CB3B1C591545C34400BDB5C9 /* Foundation.framework */,
 				CB3B1C5B1545C34400BDB5C9 /* CoreGraphics.framework */,
@@ -146,8 +143,6 @@
 				CB3B1C661545C34400BDB5C9 /* AppDelegate.h */,
 				CB3B1C671545C34400BDB5C9 /* AppDelegate.m */,
 				CB3B1C691545C34400BDB5C9 /* MainStoryboard.storyboard */,
-				CB3B1C6C1545C34400BDB5C9 /* ViewController.h */,
-				CB3B1C6D1545C34400BDB5C9 /* ViewController.m */,
 				CB3B1C8C1545C55500BDB5C9 /* Controllers */,
 				CBA140B6155AE28F001D0D85 /* Models */,
 				CBA140A8155ADF0D001D0D85 /* Services */,
@@ -327,7 +322,6 @@
 			files = (
 				CB3B1C641545C34400BDB5C9 /* main.m in Sources */,
 				CB3B1C681545C34400BDB5C9 /* AppDelegate.m in Sources */,
-				CB3B1C6E1545C34400BDB5C9 /* ViewController.m in Sources */,
 				CB3B1C8F1545C57400BDB5C9 /* CameraViewController.m in Sources */,
 				CB3B1C931545C86A00BDB5C9 /* SoundViewController.m in Sources */,
 				CBA140AC155ADF2B001D0D85 /* SoundService.m in Sources */,

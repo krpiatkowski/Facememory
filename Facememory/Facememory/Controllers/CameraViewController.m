@@ -33,6 +33,8 @@
 
         // Inserting the overlay after presentModal is smoother
         self.imagePicker.cameraOverlayView = self.overlayView;
+    } else {
+        self.snapButton.hidden = YES;
     }
 }
 

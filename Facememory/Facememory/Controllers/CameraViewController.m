@@ -1,10 +1,9 @@
 
 #import "CameraViewController.h"
+#import "Services.h"
 
 @interface CameraViewController ()
-
 @property (nonatomic) UIImagePickerControllerCameraDevice cameraDevice;
-
 @end
 
 
@@ -87,6 +86,13 @@
     }
     
     self.imagePicker.cameraDevice = self.cameraDevice;
+}
+
+- (IBAction)didFinishSelectingPicture:(id)sender {
+    [[Services profileService] createProfile];         
+    [[Services imageService] saveImage:self.previewImage.image forProfile:[Services profileService].currentProfile];
+
+    [self performSegueWithIdentifier:@"gotoSoundRecording" sender:self];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info

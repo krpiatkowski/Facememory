@@ -33,6 +33,8 @@
 		CBA140B9155AE29B001D0D85 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA140B8155AE29B001D0D85 /* Profile.m */; };
 		CBA140BA155AE29B001D0D85 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA140B8155AE29B001D0D85 /* Profile.m */; };
 		CBA140BC155AEDE5001D0D85 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA140BB155AEDE5001D0D85 /* AudioToolbox.framework */; };
+		FC9CD8E11561AB8A000BA160 /* ImageService.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9CD8E01561AB8A000BA160 /* ImageService.m */; };
+		FC9CD8E81561B707000BA160 /* ProfilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9CD8E71561B707000BA160 /* ProfilesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,10 @@
 		CBA140B7155AE29B001D0D85 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		CBA140B8155AE29B001D0D85 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		CBA140BB155AEDE5001D0D85 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FC9CD8DF1561AB8A000BA160 /* ImageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageService.h; sourceTree = "<group>"; };
+		FC9CD8E01561AB8A000BA160 /* ImageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageService.m; sourceTree = "<group>"; };
+		FC9CD8E61561B707000BA160 /* ProfilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilesViewController.h; sourceTree = "<group>"; };
+		FC9CD8E71561B707000BA160 /* ProfilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,8 @@
 				CB3B1C8E1545C57400BDB5C9 /* CameraViewController.m */,
 				CB3B1C911545C86A00BDB5C9 /* SoundViewController.h */,
 				CB3B1C921545C86A00BDB5C9 /* SoundViewController.m */,
+				FC9CD8E61561B707000BA160 /* ProfilesViewController.h */,
+				FC9CD8E71561B707000BA160 /* ProfilesViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -201,6 +209,8 @@
 				CBA140AB155ADF2B001D0D85 /* SoundService.m */,
 				CBA140B2155AE27C001D0D85 /* ProfileService.h */,
 				CBA140B3155AE27C001D0D85 /* ProfileService.m */,
+				FC9CD8DF1561AB8A000BA160 /* ImageService.h */,
+				FC9CD8E01561AB8A000BA160 /* ImageService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -328,6 +338,8 @@
 				CBA140B0155AE0CE001D0D85 /* Services.m in Sources */,
 				CBA140B4155AE27C001D0D85 /* ProfileService.m in Sources */,
 				CBA140B9155AE29B001D0D85 /* Profile.m in Sources */,
+				FC9CD8E11561AB8A000BA160 /* ImageService.m in Sources */,
+				FC9CD8E81561B707000BA160 /* ProfilesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

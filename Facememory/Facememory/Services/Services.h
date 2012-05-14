@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ImageService.h"
 #import "SoundService.h"
 #import "ProfileService.h"
 @interface Services : NSObject
 + (ProfileService *)profileService;
++ (ImageService *)imageService;
 + (SoundService *)soundService;
 @end

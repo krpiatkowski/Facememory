@@ -8,8 +8,8 @@
 
 #import "Services.h"
 
-
 @implementation Services
+static ImageService *sharedImageService;
 static SoundService *sharedSoundService;
 static ProfileService *sharedProfileService;
 
@@ -20,6 +20,14 @@ static ProfileService *sharedProfileService;
     }
     
     return sharedSoundService;
+}
++ (ImageService *)imageService
+{
+    if(!sharedImageService){
+        sharedImageService = [[ImageService alloc] init];
+    }
+    
+    return sharedImageService;
 }
 + (ProfileService *)profileService
 {

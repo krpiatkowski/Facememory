@@ -22,4 +22,5 @@
 - (IBAction)didTakePicture:(id)sender;
 - (IBAction)didRedo:(id)sender;
 - (IBAction)didToggleCam:(id)sender;
+- (IBAction)didFinishSelectingPicture:(id)sender;
 @end

@@ -10,7 +10,7 @@
         <scene sceneID="5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -41,6 +41,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="sTS-Pz-MiO" kind="push" id="mpI-nP-yDH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -49,6 +52,30 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="556" y="106"/>
+        </scene>
+        <!--Profiles View Controller-->
+        <scene sceneID="YJc-si-Xa3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8XN-MP-j2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="sTS-Pz-MiO" customClass="ProfilesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZX-GS-fuN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="aT9-eO-39k">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="337"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yl9-cg-y5n"/>
+                    <connections>
+                        <outlet property="imagesView" destination="aT9-eO-39k" id="djC-fn-0pZ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="556" y="717"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="bpC-gE-WMW">
@@ -71,7 +98,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mHM-3s-Fl0" kind="push" id="pG5-qF-OXM"/>
+                                    <action selector="didFinishSelectingPicture:" destination="3YR-3v-ufb" eventType="touchUpInside" id="gHe-lg-qMa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="elB-bv-bqC">
@@ -141,6 +168,7 @@
                         <outlet property="redoButton" destination="elB-bv-bqC" id="rGV-9M-fMp"/>
                         <outlet property="snapButton" destination="U64-Tb-lHd" id="lam-h4-8BS"/>
                         <outlet property="toggleCamButton" destination="Rdt-Du-H5f" id="9oc-Yv-9rV"/>
+                        <segue destination="mHM-3s-Fl0" kind="push" identifier="gotoSoundRecording" id="zPc-aq-w19"/>
                     </connections>
                 </viewController>
             </objects>
@@ -250,38 +278,6 @@
             <point key="canvasLocation" x="114" y="106"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CameraViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="didRedo:"/>
-                <relationship kind="action" name="didTakePicture:"/>
-                <relationship kind="action" name="didToggleCam:"/>
-                <relationship kind="outlet" name="confirmButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="overlayView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="previewImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="redoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="snapButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="toggleCamButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SoundViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SoundViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="didConfirm:"/>
-                <relationship kind="action" name="didRedo:"/>
-                <relationship kind="action" name="didTapPlay:"/>
-                <relationship kind="action" name="didToggleRecord:"/>
-                <relationship kind="outlet" name="confirmButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="recordButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="redoButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

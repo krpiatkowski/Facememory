@@ -30,8 +30,7 @@
 
 - (void)saveProfile
 {
-    NSMutableArray *mProfiles = (NSMutableArray *)self.profiles;
-    [mProfiles addObject:mProfiles];
+    _profiles = [self.profiles arrayByAddingObject:_currentProfile];
     _currentProfile = nil;
 }
 @end

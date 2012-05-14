@@ -52,7 +52,7 @@
     if(!self.recordButton.selected) {
         [self.recordButton setSelected:YES];
         
-        [[Services profileService] createProfile];        
+//        [[Services profileService] createProfile]; // This line should go. Camera creates the profile
         [[Services soundService] recordForProfile:[Services profileService].currentProfile];
         
     } else {
@@ -67,6 +67,7 @@
 
 - (IBAction)didConfirm:(id)sender
 {
+    [[Services profileService] saveProfile];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
